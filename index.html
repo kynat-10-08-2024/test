@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#details" id="details-link" data-en="Details" data-uk="Деталі">Details</a></li>
+                <li><a href="#itinerary" id="info-link" data-en="Itinerary" data-uk="План">Itinerary</a></li>
+                <li class="title">N & K</li>
+                <li><a href="#venue" id="venue-link" data-en="Venue" data-uk="Локація">Venue</a></li>
+                <li><a href="#photos" id="photos-link" data-en="Photos" data-uk="Фото">Photos</a></li>
+                <li>
+                <select id="language-switcher" class="language-switcher">
+                    <option value="en">EN</option>
+                    <option value="uk">UA</option>
+                </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main>
+            <h2 data-en="THE" data-uk="">THE</h2>
+            <h3 data-en="Wedding" data-uk="Весілля">Wedding</h3>
+            <h2 data-en="OF" data-uk="">OF</h2>
+            <h1 data-en="NATALIE & KIRILL" data-uk="НАТАЛІЇ ТА КИРИЛА">NATALIE & KIRILL</h1>
+            <h4 data-en="OCTOBER 8, 2024" data-uk="8 ЖОВТНЯ 2024">OCTOBER 8, 2024</h4>
+            <div id="countdown"></div>
+            <h5 data-en="Borgo dé Brandi" data-uk="Borgo dé Brandi">Borgo dé Brandi</h5>
+            <h6 data-en="Loc. Caminata, 3, 53035" data-uk="Loc. Caminata, 3, 53035">Loc. Caminata, 3, 53035</h6> 
+            <h6 data-en="Monteriggioni, SI, Italy" data-uk="Monteriggioni, SI, Italy">Monteriggioni, SI, Italy</h6>
+
+        </main>
+
+        <section id="venue">
+                <h2 class="venue-h2" data-en="Venue" data-uk="Місце">Venue</h2>
+                <p class="venue-p1" data-en="Villa Borgo de Brandi" data-uk="Вілла Borgo de Brandi">Villa Borgo de Brandi</p>
+                <p class="venue-p2" data-en="Clik here to see the address: Loc. Caminata, 3, 53035 Monteriggioni, SI, Italia" data-uk="Натисніть тут, щоб побачити адресу: Loc. Caminata, 3, 53035 Monteriggioni, SI, Italia"><a href="https://www.google.com/maps/place/Borgo+dé+Brandi/@43.3811408,11.2293193,15z/data=!4m2!3m1!1s0x0:0x637c2ddd2be84115?sa=X&ved=1t:2428&ictx=111">Clik here to see the address: Loc. Caminata, 3, 53035 Monteriggioni, SI, Italia</a></p>
+                <div class="venue-photos">
+                    <img src="venue1.jpg" alt="Villa photo 1">
+                    <img src="venue2.jpg" alt="Villa photo 2">
+                    <img src="venue3.jpg" alt="Villa photo 3">
+                </div>
+        </section>
+
+        <section id="itinerary">
+            <h2 class="itinerary" data-en="Itinerary" data-uk="Хронологія подій">Itinerary</h2>
+            <img src="Timeline copy.png" alt="Wedding Timeline" class="timeline">
+        </section>
+
+        <section id="details">
+                <h2 class="details-h2" data-en="Dress Code - Colors" data-uk="Бажані кольори для одягу гостей">Dress Code - Colors</h2>
+                <div class="color-boxes">
+                    <div class="color-box" style="background-image: url('color1.jpg');"></div>
+                    <div class="color-box" style="background-image: url('color2.jpg');"></div>
+                    <div class="color-box" style="background-image: url('color3.jpg');"></div>
+                    <div class="color-box" style="background-image: url('color7.jpg');"></div>
+                </div>
+                <div class="exclude-section">
+                    <div class="white-box"></div>
+                    <div data-en="Exclude dresses in white color" data-uk="Виключіть варіанти суконь білого кольору" class="exclude-text">Exclude dresses in white color</div>
+                </div>
+
+                <div class="organization" data-en="ORGANIZATIONAL MOMENTS" data-uk="ОРГАНІЗАЦІЙНІ МОМЕНТИ"> ORGANIZATIONAL MOMENTS</div>
+                <div class="organization-details" data-en="Right after the wedding, we plan to travel, so we ask you not to give flowers. We simply won't have time to enjoy them. Instead of flowers, we will be happy with a bottle of your favorite wine, which will be another good reason to meet and share it together." data-uk="Відразу після весілля ми плануємо подорожувати, тому квітів просимо не дарувати. Ми просто не встигнемо ними насолодитися. Замість квітів ми будемо раді пляшці улюбленого вина, що стане ще одним гарним приводом зустрітися та розділити його разом.">Right after the wedding, we plan to travel, so we ask you not to give flowers. We simply won't have time to enjoy them. Instead of flowers, we will be happy with a bottle of your favorite wine, which will be another good reason to meet and share it together.</div>
+
+        </section>
+
+
+        <section id="photos">
+                <h2 class="Photos" data-en="Wedding Photos" data-uk="Весільні Фото">Wedding Photos</h2>
+                <a href="https://photos.app.goo.gl/6krcemK2HMGqR7NF9" target="_blank" class="photo-button" data-en="Upload All Photos You Took Here" data-uk="Додайте фото, які ви зробили тут">Upload All Photos You Took Here</a>
+        </section>
+
+        <footer>
+            <p class="footer" data-en="Thank you for joining us on our special day!" data-uk="Дякуємо, що приєдналися до нас у цей особливий день!">Thank you for joining us on our special day!</p>
+        </footer>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
