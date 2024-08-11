@@ -1,17 +1,3 @@
-.tag {
-}
-
-.tag {
-  opacity: 0;
-  transform: translate(0, 10vh);
-  transition: all 5s;
-}
-
-.tag.visible {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
 
 body {
     margin: 0;
@@ -20,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400vh;
+    height: 490vh;
     background-color: #fff;
     overflow-x: hidden;
 }
@@ -37,28 +23,25 @@ header {
     background-color: #fff;
     padding-left: 53px;
     position: fixed;
-    width: 35%;
+    width: 100%;
     top: 0;
     z-index: 1000;
+    justify-content: space-between;
+    padding-left: 160px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 0.5em;
+    justify-content: space-around;
 
-    top: 0;
-    background: #fff;
-    padding-top: 0.5em;
+
 }
 
 nav ul li {
-    display: inline;
-    align-items: center;
+    padding: 5px;
+    margin-left: 10px;
 }
 
 nav ul li a {
@@ -72,6 +55,11 @@ nav ul .title {
     font-size: 2em;
     font-weight: normal;
     margin-left: 10px;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 header h1 {
@@ -91,7 +79,7 @@ main h2 {
 }
 
 main h3 {
-    font-size: 4em;
+    font-size: 8em;
     margin: 0.2em 0;
     font-weight: lighter;
     letter-spacing: 10px;
@@ -188,6 +176,7 @@ main section {
 .exclude-section {
     display: flex;
     align-items: center;
+    align-content: center;
     position: relative;
     padding-left: 250px;
     padding-top: 30px;
@@ -308,6 +297,10 @@ main section {
     transform: translateY(0px);
 }
 
+#venuep2 {
+    text-decoration: none;
+}
+
 .venue-p2{
     text-decoration: none;
     opacity: 0;
@@ -345,12 +338,28 @@ main section {
     transform: translateY(0px);
 }
 
+.attire-details {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    width: 45%;
+    padding-left: 220px;
+}
+
+.wedding-photos {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    width: 45%;
+    padding-left: 220px;
+}
+
 .organization-details {
     font-size: 16px;
     line-height: 1.5;
     color: #333;
     width: 45%;
-    padding-left: 205px;
+    padding-left: 220px;
     margin-bottom: 100px;
     opacity: 0;
     transform: translateY(20px);
@@ -427,11 +436,145 @@ p{
 }
 
 
+
+#hamburger-icon {
+    margin-top: 30px;
+    display: none;
+    cursor: pointer;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%
+    background-color: white;
+
+}
+
+
+
 /* Responsive design */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
+    .timeline {
+        width: 104%;
+        align-content: center;
+        padding-left: 0px;
+        margin-left: 0px;
+
+    }
+
+    .exclude-section {
+        
+        padding-left: 100px;
+    }
+
+    .organization-details {
+        padding-left: 125px;
+
+    }
+
+    .attire-details {
+        padding-left: 125px;
+
+    }
+
+    .wedding-photos {
+        padding-left: 125px;
+
+    }
+
+
+    .mobile-menu {
+        align-content: center;
+        width: 100%;
+        background-color: white;
+        list-style: none;
+        border-bottom: 1px solid #404040;
+        align-self: left;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+
+    }
+
+
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        display: none;
+    }
+
+    #hamburger-icon {
+        padding-left: 0px;
+        margin-left: 0px;
+        display: block;
+        width: 100%;
+        background-color: white;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        align-self: left;
+    }
+
+    nav ul {
+        overflow: hidden;
+        height: 0
+    }
+
+    nav ul.open {
+        height: auto;
+
+    }
+
+    nav ul li {
+        float: none;
+        text-align: center;
+        width: 100%
+        margin: 0;
+        padding: 20px;
+
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: lighter;
+        color: black;
+        padding: 20px;
+        border-bottom: 1px solid #404040;
+        display: block;
+        margin: 0;
+
     }
 
     nav ul .title {
@@ -439,16 +582,56 @@ p{
     }
 
     main {
-        margin-top: 100px;
+        padding-top: 380px;
     }
+
+
+
 
     .color-box {
         width: 80px;
         height: 80px;
     }
 
-    .modal-content {
-        width: 90%;
+    #NK {
+        text-align: center;
+        margin-right: 160px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    #details-link {
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: lighter;
+        color: black;
+        text-align: center;
+        padding-top: 20px;
+
+    }
+
+    #info-link {
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: lighter;
+        color: black;
+        padding-top: 20px;
+    }
+
+    #venue-link {
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: lighter;
+        color: black;
+        padding-top: 20px;
+    }
+
+    #photos-link {
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: lighter;
+        color: black;
+        padding-top: 20px;
     }
 }
 
