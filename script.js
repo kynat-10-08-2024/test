@@ -1,3 +1,5 @@
+
+
 function scrollAppear(){
   var photosWedding = document.querySelector('.Photos')
   var photosPosition = photosWedding.getBoundingClientRect().top;
@@ -123,7 +125,9 @@ function scrollAppear(){
 
 
 
-
+function toggleMobileMenu(menu) {
+  menu.classList.toggle('open');
+}
 
 
 
@@ -211,6 +215,15 @@ languageSwitcher.addEventListener("change", function() {
   });
 });
 
+var languageSwitchers = document.getElementById("language-switcher2");
+languageSwitchers.addEventListener("change", function() {
+  var selectedLanguage = this.value;
+  var elements = document.querySelectorAll("[data-en]");
+
+  elements.forEach(function(element) {
+    element.textContent = element.getAttribute("data-" + selectedLanguage);
+  });
+});
 
 // Scroll effect
 $(window).on("scroll", function() {
